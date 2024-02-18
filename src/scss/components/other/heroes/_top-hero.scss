@@ -1,0 +1,36 @@
+// ヒーローイメージ・ヘッダー画像・ラージヘッダー・キービジュアル・メインビジュアル
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/_index.scss";
+
+
+.topHero {
+  position: relative;
+  height: 100vh;
+  margin-bottom: 8rem;
+  display: grid;
+  place-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 50% 0 0;
+    z-index: -1;
+    background-image: url(../images/top/bg-hero.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__heading {
+    text-align: center;
+    font-family: index.$OswaldFont;
+    font-size: max(12vw, 3rem);
+    line-height: 1.2;
+  }
+
+
+  @include index.mq() {
+    margin-bottom: 16rem;
+  }
+}

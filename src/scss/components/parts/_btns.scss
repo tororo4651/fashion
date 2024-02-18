@@ -1,0 +1,25 @@
+// パーツ・ボタン
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+// プライマリ
+.primaryBtn {
+  display: inline-block;
+  padding: 1rem;
+  border: solid 1px g.$mainColor;
+  border-radius: 8px;
+  background-color: g.$mainColor;
+  color: g.$whiteColor;
+  transition: all .4s;
+
+
+  @include g.mq('md-min') {
+    &:hover {
+      background-color: g.$lightGreenColor;
+      color: g.$mainColor;
+    }
+  }
+}

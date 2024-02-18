@@ -1,0 +1,54 @@
+// セクション・トップページ03
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.topSection03 {
+  height: 40rem;
+  text-align: center;
+  background-image: url(../images/top/bg-shop.jpg);
+  background-position: center top;
+  background-size: cover;
+
+  &__inner {
+    width: 90%;
+    max-width: 38rem;
+    margin-inline: auto;
+    translate: 0 -8rem;
+    padding: 3rem;
+    background-color: g.$whiteColor;
+  }
+
+  &__heading {
+    margin-block-end: 2rem;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    margin-bottom: 3rem;
+  }
+
+  &__shop {
+    border-top: solid 1px g.$lightGrayColor;
+    padding-block-start: 2rem;
+
+    &Name {
+      margin-block-end: 1rem;
+      font-size: 1.17rem;
+    }
+
+    &Content {
+      line-height: 1.7;
+    }
+  }
+
+
+  @include g.mq('md-min') {
+    height: 50rem;
+  }
+}

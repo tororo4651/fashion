@@ -1,0 +1,96 @@
+// グローバルナビゲーション
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+// ボタン
+.gNavBtn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+
+  // 開くボタン
+  &--open {
+    z-index: 1;
+    border: solid 1px g.$mainColor;
+  }
+
+  // 閉じるボタン
+  &--close {
+    position: absolute;
+    border: solid 1px g.$lightGreenColor;
+  }
+
+  &:hover {
+    background-color: g.$lightGreenColor;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+
+    // 開くボタンのアイコン
+    &--open {
+      fill: g.$mainColor;
+    }
+
+    // 閉じるボタンのアイコン
+    &--close {
+      fill: g.$lightGreenColor;
+      transition: .4s;
+
+      .gNavBtn--close:hover & {
+        fill: g.$mainColor;
+      }
+    }
+  }
+}
+
+
+// メニュー
+.gNav {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 2;
+  width: max(32vw, 20rem);
+  background-color: g.$mainColor;
+  box-shadow: 0 0 2rem g.$mainColor;
+  translate: 100vw;
+  transition: translate 1.4s;
+
+  .is-gNavOpen & {
+    translate: 0;
+  }
+
+  &__list {
+    margin-block-start: 9.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+  }
+
+  &__item {
+    font-family: g.$OswaldFont;
+    font-size: 2rem;
+    opacity: 0;
+  }
+
+  &__link {
+    color: g.$lightGreenColor;
+    transition: color .4s;
+
+    &:hover {
+      color: g.$greenColor;
+    }
+  }
+}

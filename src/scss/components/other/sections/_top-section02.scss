@@ -1,0 +1,94 @@
+// セクション・トップページ02
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.topSection02 {
+  margin-bottom: 16rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  &__content {
+    max-width: 38rem;
+    padding-inline: 1rem;
+    margin-inline: auto;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+  }
+
+  &__thumbnails {
+    display: grid;
+    grid-template-columns:
+    repeat(5, 1fr);
+    gap: 1rem;
+  }
+
+  &__thumbnail {
+
+    &Image {
+      cursor: pointer;
+    }
+  }
+
+  &__figure {
+    position: relative;
+    width: min(100%, 38rem - 2rem);
+    // max-width: calc(38rem - 2rem);
+    margin-inline: auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 1rem;
+      border: solid 3px g.$whiteColor;
+    }
+  }
+
+
+  @include g.mq() {
+    height: 100vh;
+    margin-bottom: 20rem;
+    flex-direction: row-reverse;
+
+    &__content {
+      width: 30%;
+      max-width: 38rem;
+      align-self: center;
+    }
+
+    &__heading {
+      margin-bottom: 3rem;
+    }
+
+    &__thumbnails {
+      grid-template-columns:
+        repeat(3, 1fr);
+        gap: 2vw;
+    }
+
+    &__thumbnail {
+
+      &Image {
+        transition: box-shadow .4s;
+
+        &:hover {
+          box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+        }
+      }
+    }
+
+    &__figure {
+      width: 50%;
+    }
+
+    &__image {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+// セクション・トップページ01
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.topSection01 {
+  position: relative;
+  margin-block-end: 8rem;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 20%,
+    g.$lightGrayColor 20%,
+    g.$lightGrayColor 100%
+  );
+
+  &__content {
+    max-width: 38rem;
+    padding-inline: 1rem;
+    margin: 0 auto 2rem;
+  }
+
+  &__heading {
+    margin-block-end: 2rem
+  }
+
+  &__text {
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+
+  // 画面横幅 800px 以上。
+  @include g.mq() {
+    margin-block-end: 16rem;
+    display: flex;
+    align-items: center;
+
+    &__content {
+      margin: auto;
+    }
+
+    &__heading {
+      margin-bottom: 3rem;
+    }
+
+    &__figure {
+      margin-block: -6rem;
+      flex: 0 0 608px;
+      max-width: 38rem;
+    }
+  }
+}

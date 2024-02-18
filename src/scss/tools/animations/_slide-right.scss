@@ -1,0 +1,15 @@
+// アニメーション・スライドライト
+
+.js-slideRight {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba(#0bd, .9);
+  }
+}

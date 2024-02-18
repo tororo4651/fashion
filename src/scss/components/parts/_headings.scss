@@ -1,0 +1,19 @@
+// パーツ・見出し
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+// プライマリ
+.primaryHeading {
+  text-align: center;
+
+  &__inner {
+    display: inline-block;
+    padding-inline: 10px;
+    color: white;
+    font-family: g.$OswaldFont;
+    font-size: min(10vw, 3.5rem);
+  }
+}

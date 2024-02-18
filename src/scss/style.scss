@@ -1,0 +1,71 @@
+// CSSカスタムプロパティ、CSS変数、カスケード変数
+@use "./settings/variables";
+
+
+
+
+// ベース
+@use "bases/bases";
+
+
+
+
+// コンポーネント・パーツ
+
+// 見出し
+@use "./components/parts/headings";
+
+// ボタン
+@use "./components/parts/btns";
+
+
+
+
+// コンポーネント・共通
+
+// ローディング
+@use "./components/common/loading";
+
+// グローバルナビゲーション
+@use "./components/common/gnav";
+
+
+
+
+// コンポーネント・その他
+
+// ヒーローイメージ、ヘッダー画像、ラージヘッダー、キービジュアル、メインビジュアル・トップページ
+@use "./components/other/heroes/_top-hero.scss";
+
+// セクション・トップページ01
+@use "./components/other/sections/top-section01";
+// セクション・トップページ02
+@use "./components/other/sections/top-section02";
+// セクション・トップページ03
+@use "./components/other/sections/top-section03";
+
+
+
+
+// ページ
+
+// トップページ
+@use "./pages/_top.scss";
+
+
+
+
+// ツール・アニメーション
+
+// フェードアップ
+@use "./tools/animations/fade-up";
+
+// スライドライト
+@use "./tools/animations/_slide-right.scss";
+
+
+
+
+.test01 {
+  user-select: none;
+}
