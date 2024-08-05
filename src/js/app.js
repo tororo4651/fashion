@@ -5,7 +5,9 @@ import '../scss/style.scss';
 
 
 // jQuery
+
 // import $ from 'jquery';
+
 // $('.topSection01__text').css('background-color', '#ed8');
 
 
@@ -16,17 +18,18 @@ import '../scss/style.scss';
 // const loadingText = document.querySelector('.loading__text');
 // const loadingScreen = document.querySelector('.loading__screen');
 
+
 // window.addEventListener('load', (e) => {
 //   // テキスト
 //   loadingText.animate(
 //     [
 //       {
-//         opacity: 1,
-//         offset: .8
+//         offset: .8,
+//         opacity: 1
 //       },
 //       {
-//         opacity: 0,
-//         offset: 1
+//         offset: 1,
+//         opacity: 0
 //       }
 //     ],
 //     {
@@ -212,33 +215,21 @@ import '../scss/style.scss';
 
 //   const content =
 //    `<li class="topSection02__thumbnail js-fadeUp">
-//       <img class="topSection02__thumbnailImage" src="/images/${src}" alt="" >
+//       <img class="topSection02__thumbnailImage" src="/images/${src}" alt="写真：概要" width="900" height="1200">
 //     </li>`;
 
 //   thumbnails.insertAdjacentHTML('beforeend', content);
 // });
 
 
-// const thumbnailImages = document.querySelectorAll('.topSection02__thumbnailImage');
-
-// const mainImage = document.querySelector('.topSection02__image');
 
 
 // Lookbook のサムネイル拡大表示
-// for (let i = 0; i < thumbnailImages.length; i++) {
-//   thumbnailImages[i].addEventListener('mouseover', function() {
-//     mainImage.src  = this.src;
-
-//     mainImage.animate(
-//       {
-//         opacity: [0, 1]
-//       },
-//       500
-//     );
-//   }, false);
-// }
+// const thumbnailImages = document.querySelectorAll('.topSection02__thumbnailImage');
+// const mainImage = document.querySelector('.topSection02__image');
 
 
+// 書き方１
 // thumbnailImages.forEach((thumbnailImage, index) => {
 //   thumbnailImage.addEventListener('mouseover', (e) => {
 //     mainImage.src = e.target.src;
@@ -253,6 +244,21 @@ import '../scss/style.scss';
 // });
 
 
+// 書き方２
+// for (let i = 0; i < thumbnailImages.length; i++) {
+//   thumbnailImages[i].addEventListener('mouseover', function() {
+//     mainImage.src  = this.src;
+
+//     mainImage.animate(
+//       {
+//         opacity: [0, 1]
+//       },
+//       500
+//     );
+//   }, false);
+// }
+
+
 
 
 // フェードアップ
@@ -262,13 +268,13 @@ import '../scss/style.scss';
 //       entries[i].target.animate(
 //         {
 //           opacity: [0, 1],
-//           filter: ['blur(.4rem)', 'blur(0)'],
-//           translate: ['0 4rem', 0]
+//           translate: ['0 4rem', 0],
+//           filter: ['blur(.4rem)', 'blur(0)']
 //         },
 //         {
 //           duration: 2000,
 //           easing: 'ease',
-//           fill: 'forwards'
+//           // fill: 'forwards'
 //         }
 //       );
 
@@ -283,13 +289,13 @@ import '../scss/style.scss';
 // //       entry.target.animate(
 // //         {
 // //           opacity: [0, 1],
-// //           filter: ['blur(.4rem)', 'blur(0)'],
-// //           translate: ['0 4rem', 0]
+// //           translate: ['0 4rem', 0],
+// //           filter: ['blur(.4rem)', 'blur(0)']
 // //         },
 // //         {
 // //           duration: 2000,
 // //           easing: 'ease',
-// //           fill: 'forwards'
+// //           // fill: 'forwards'
 // //         }
 // //       );
 
