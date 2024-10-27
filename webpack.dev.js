@@ -11,6 +11,7 @@ module.exports = merge(commonConfig, {
       directory: path.resolve(__dirname, 'public'),
     },
   },
-  watch: true,
+  // watch: true,
+  // serveコマンドを実行した場合は、監視モードがデフォルトで有効になっているので、watch は削って良い。
   devtool: 'source-map',
 });

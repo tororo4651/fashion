@@ -13,7 +13,7 @@ import '../scss/style.scss';
 
 
 
-// ローディング 1
+// ローディング
 // const loading = document.querySelector('.loading');
 // const loadingText = document.querySelector('.loading__text');
 // const loadingScreen = document.querySelector('.loading__screen');
@@ -73,35 +73,6 @@ import '../scss/style.scss';
 
 
 
-// ローディング 2
-// const leftLoading = document.querySelector('.leftLoading');
-// const rightLoading = document.querySelector('.rightLoading');
-
-// window.addEventListener('load', (e) => {
-
-//   const options = {
-//     duration: 2000,
-//     easing: 'ease',
-//     fill: 'forwards'
-//   };
-
-//   leftLoading.animate(
-//     {
-//       // translate: [0, '-100%']
-//       scale: [1, '0 1']
-//     },
-//     options
-//   );
-
-//   rightLoading.animate(
-//     {
-//       // translate: [0, '100%']
-//       scale: [1, '0 1']
-//     },
-//     options
-//   );
-
-// }, false);
 
 
 
@@ -177,6 +148,8 @@ import '../scss/style.scss';
 
 
 
+
+
 // Lookbook のサムネイル表示
 // const photos = [
 //   {
@@ -208,7 +181,7 @@ import '../scss/style.scss';
 //   }
 // ];
 
-// const thumbnails = document.querySelector('.topSection02__thumbnails');
+// const topSection02Thumbnails = document.querySelector('.topSection02__thumbnails');
 
 // photos.forEach((photo, index, array) => {
 //   const { src } = photo;
@@ -218,8 +191,24 @@ import '../scss/style.scss';
 //       <img class="topSection02__thumbnailImage" src="/images/${src}" alt="写真：概要" width="900" height="1200">
 //     </li>`;
 
-//   thumbnails.insertAdjacentHTML('beforeend', content);
+//   topSection02Thumbnails.insertAdjacentHTML('beforeend', content);
+
+//   const topSection02ThumbnailEls = document.querySelectorAll('.topSection02__thumbnail');
+
+//   topSection02ThumbnailEls[index].animate(
+//     {
+//       opacity: [0, 1]
+//     },
+//     {
+//       duration: 1000,
+//       delay: index * 300,
+//       easing: 'ease',
+//       fill: 'forwards'
+//     }
+//   );
 // });
+
+
 
 
 
@@ -261,6 +250,8 @@ import '../scss/style.scss';
 
 
 
+
+
 // フェードアップ
 // const fadeUp = (entries, obs) => {
 //   for (let i = 0; i < entries.length; i++) {
@@ -283,6 +274,8 @@ import '../scss/style.scss';
 //   }
 // };
 
+    // or
+
 // // const fadeUp = (entries, obs) => {
 // //   entries.forEach((entry) => {
 // //     if (entry.isIntersecting) {
@@ -294,8 +287,7 @@ import '../scss/style.scss';
 // //         },
 // //         {
 // //           duration: 2000,
-// //           easing: 'ease',
-// //           // fill: 'forwards'
+// //           easing: 'ease'
 // //         }
 // //       );
 
@@ -312,9 +304,15 @@ import '../scss/style.scss';
 // //   fadeUpObserver.observe(fadeUpElement);
 // // });
 
+    // or
+
 // for (let i = 0; i < fadeUpElements.length; i++) {
 //   fadeUpObserver.observe(fadeUpElements[i]);
 // }
+
+
+
+
 
 
 
