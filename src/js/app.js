@@ -45,6 +45,9 @@ import '../scss/style.scss';
 //     {
 //       opacity: [1, 0],
 //       visibility: 'hidden'
+//         or
+//       backgroundColor: ['rgb(238 238 238 / 1)', 'rgb(238 238 238 / 0)']
+//       backdropFilter: ['blur(10px)', 'blur(0)']
 //     },
 //     {
 //       duration: 2000,
@@ -69,8 +72,6 @@ import '../scss/style.scss';
 //   );
 
 // }, false);
-
-
 
 
 
@@ -144,6 +145,68 @@ import '../scss/style.scss';
 //   }
 
 // }, false);
+
+
+
+// CSS でアニメーション
+// gNavOpenBtn.addEventListener('click', (e) => {
+//   document.documentElement.classList.add('is-gNavOpen');
+// }, false);
+  // toggle でも可。
+
+
+// gNavCloseBtn.addEventListener('click', (e) => {
+//   document.documentElement.classList.remove('is-gNavOpen');
+// }, false);
+  // toggle でも可。
+
+
+// .gNav {
+//   position: fixed;
+//   inset: 0 0 0 auto;
+//   z-index: 2;
+//   width: max(32vw, 20rem);
+//   background-color: g.$mainColor;
+//   box-shadow: 0 0 2rem g.$mainColor;
+//   translate: 100vw;
+//   transition: translate 1.4s;
+
+//   .is-gNavOpen & {
+//     translate: 0;
+//   }
+
+//   &__item {
+//     font-family: g.$OswaldFont;
+//     font-size: 2rem;
+//     opacity: 0;
+//     translate: 2rem;
+
+//     &:first-child {
+//       transition: 2.4s;
+//     }
+
+//     &:nth-child(2) {
+//       transition: 2.4s 0.3s;
+//     }
+
+//     &:nth-child(3) {
+//       transition: 2.4s 0.6s;
+//     }
+
+//     &:nth-child(4) {
+//       transition: 2.4s 0.9s;
+//     }
+
+//     &:nth-child(5) {
+//       transition: 2.4s 1.2s;
+//     }
+
+//     .is-gNavOpen & {
+//       opacity: 1;
+//       translate: 0;
+//     }
+//   }
+// }
 
 
 
@@ -264,8 +327,7 @@ import '../scss/style.scss';
 //         },
 //         {
 //           duration: 2000,
-//           easing: 'ease',
-//           // fill: 'forwards'
+//           easing: 'ease'
 //         }
 //       );
 
@@ -326,7 +388,7 @@ import '../scss/style.scss';
 //           translate: ['-100%', 0]
 //         },
 //         {
-//           duration: 2000,
+//           duration: 1200,
 //           easing: 'ease',
 //           pseudoElement: '::before'
 //         }
